@@ -11,5 +11,9 @@ import {
 } from '@mui/material'
 
 export const Welcome = () => {
-  return <Fragment>Welcome</Fragment>
+  return (
+    <Fragment>
+      <Typography>TODO: links to social media pages and a logo.</Typography>
+    </Fragment>
+  )
 }

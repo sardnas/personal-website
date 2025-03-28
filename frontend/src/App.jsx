@@ -6,7 +6,7 @@ const centerContentWrapper = { display: 'flex', justifyContent: 'center' }
 const contentWrapperStyle = {
   display: 'flex',
   flexDirection: 'column',
-  maxWidth: '80rem',
+  maxWidth: '30rem',
   flexGrow: 1,
 }
 const MainWrapper = ({ children }) => {

@@ -1,6 +1,7 @@
 import React, { Fragment, useState, useEffect } from 'react'
 import { Content } from './Content'
 import { Welcome } from './Welcome'
+import EmojiEmotionsIcon from '@mui/icons-material/EmojiEmotions'
 import {
   Container,
   Card,
@@ -19,12 +20,20 @@ export const Menu = ({ style }) => {
     '0000000001': {
       id: '0000000001',
       title: 'The Sims 4',
-      content: ['Something 1'],
+      content: ['This is the content related to The Sims 4.'],
+      links: ['The Gallery', 'Custom Content', 'Mods'],
     },
     '0000000002': {
       id: '0000000002',
       title: 'Knitting & Fiber Arts',
-      content: ['Something 2'],
+      content: ['Here you can find my published patterns etc.'],
+      links: ['Patterns', 'Ravelry'],
+    },
+    '0000000003': {
+      id: '0000000003',
+      title: 'Coding',
+      content: ['I work as a developer.'],
+      links: ['GitHub', 'LinkedIn'],
     },
   }
   useEffect(() => {
@@ -33,22 +42,28 @@ export const Menu = ({ style }) => {
   return (
     <Fragment>
       <Card style={style}>
-        <Welcome />
-        <List>
-          {Object.keys(menuItems).map((key) => {
-            return (
-              <ListItemButton key={key} onClick={() => setActiveItem(key)}>
-                <ListItemIcon>Icon</ListItemIcon>
-                <ListItemText primary={menuItems[key].title} />
-              </ListItemButton>
-            )
-          })}
-        </List>
-        {menuItems[activeItem] && (
-          <Content 
-          key={activeItem} 
-          content={menuItems[activeItem].content} />
-        )}
+        <CardContent>
+          <Welcome />
+          <List>
+            {Object.keys(menuItems).map((key) => {
+              return (
+                <ListItemButton key={key} onClick={() => setActiveItem(key)}>
+                  <ListItemIcon>
+                    <EmojiEmotionsIcon />
+                  </ListItemIcon>
+                  <ListItemText primary={menuItems[key].title} />
+                </ListItemButton>
+              )
+            })}
+          </List>
+          {menuItems[activeItem] && (
+            <Content
+              key={activeItem}
+              content={menuItems[activeItem].content}
+              links={menuItems[activeItem].links}
+            />
+          )}
+        </CardContent>
       </Card>
     </Fragment>
   )
