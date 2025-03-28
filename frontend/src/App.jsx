@@ -1,17 +1,5 @@
 import React from 'react'
-import { AppBar, Toolbar, Typography } from '@mui/material'
-
-const MainAppBar = () => {
-  return (
-    <AppBar position='static' color='primary'>
-      <Toolbar>
-        <Typography variant='h6' color='inherit'>
-          Hello
-        </Typography>
-      </Toolbar>
-    </AppBar>
-  )
-}
+import { Menu } from './components/Menu'
 
 const mainWrapperStyle = { display: 'flex', flexDirection: 'column' }
 const centerContentWrapper = { display: 'flex', justifyContent: 'center' }
@@ -24,7 +12,6 @@ const contentWrapperStyle = {
 const MainWrapper = ({ children }) => {
   return (
     <div style={mainWrapperStyle}>
-      <MainAppBar />
       <div style={centerContentWrapper}>
         <div style={contentWrapperStyle}>{children}</div>
       </div>
@@ -35,6 +22,7 @@ const MainWrapper = ({ children }) => {
 const App = () => {
   return (
     <MainWrapper>
+      <Menu/>
     </MainWrapper>
   )
 }
