@@ -1,5 +1,28 @@
 import React from 'react'
+import { createTheme, ThemeProvider } from '@mui/material/styles'
 import { Menu } from './components/Menu'
+
+const theme = createTheme({
+  palette: {
+    mode: 'dark',
+    primary: {
+      main: '#ff9100',
+    },
+    secondary: {
+      main: '#F73378',
+    },
+  },
+  typography: {
+    h1: {
+      fontSize: '2rem',
+      fontWeight: 'bold',
+    },
+    body1: {
+      fontSize: '1rem',
+    },
+  },
+  spacing: 8, // Custom spacing (default is 8px)
+})
 
 const mainWrapperStyle = { display: 'flex', flexDirection: 'column' }
 const centerContentWrapper = { display: 'flex', justifyContent: 'center' }
@@ -21,9 +44,11 @@ const MainWrapper = ({ children }) => {
 
 const App = () => {
   return (
-    <MainWrapper>
-      <Menu/>
-    </MainWrapper>
+    <ThemeProvider theme={theme}>
+      <MainWrapper>
+        <Menu />
+      </MainWrapper>
+    </ThemeProvider>
   )
 }
 

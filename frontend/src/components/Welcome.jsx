@@ -13,6 +13,9 @@ import {
 export const Welcome = () => {
   return (
     <Fragment>
+      <Typography variant='h2' color='secondary'>
+        Welcome
+      </Typography>
       <Typography>TODO: links to social media pages and a logo.</Typography>
     </Fragment>
   )
