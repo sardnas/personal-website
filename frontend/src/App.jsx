@@ -4,12 +4,18 @@ import { Menu } from './components/Menu'
 
 const theme = createTheme({
   palette: {
-    mode: 'dark',
+    mode: 'light',
     primary: {
-      main: '#ff9100',
+      main: '#d19ea3',
+      light: '#ffe3e8',
+      dark: '#005b53',
     },
     secondary: {
-      main: '#F73378',
+      main: '#b0ad88',
+    },
+    background: {
+      default: '#ffe5e7',
+      paper: 'rgba(255,255,255,0.52)',
     },
   },
   typography: {
