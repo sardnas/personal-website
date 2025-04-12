@@ -20,11 +20,13 @@ const theme = createTheme({
   },
   typography: {
     h1: {
-      fontSize: '2rem',
+      fontSize: '3rem',
       fontWeight: 'bold',
+      fontFamily: 'Dongle',
     },
     body1: {
       fontSize: '1rem',
+      fontFamily: 'Quicksand',
     },
   },
   spacing: 8, // Custom spacing (default is 8px)

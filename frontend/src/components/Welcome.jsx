@@ -1,4 +1,8 @@
 import React, { Fragment, useState, useEffect } from 'react'
+import { ReactComponent as Logo } from './studiofarg.svg';
+import { SocialMedia } from './SocialMedia';
+import EmojiEmotionsIcon from '@mui/icons-material/EmojiEmotions'
+
 import {
   Container,
   Card,
@@ -13,10 +17,9 @@ import {
 export const Welcome = () => {
   return (
     <Fragment>
-      <Typography variant='h2' color='secondary'>
-        Welcome
-      </Typography>
-      <Typography>TODO: links to social media pages and a logo.</Typography>
+      <Logo width='100%'/>
+      <SocialMedia/>
+      <Typography>Hello! My name is Sandra. Welcome to my little corner of the internet. Here I have gathered links to all of my social media accounts and information about all of my hobby projects.</Typography>
     </Fragment>
   )
 }
